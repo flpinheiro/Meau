@@ -4,7 +4,7 @@ import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
 
 import { View, StyleSheet } from "react-native";
 
-import { Feather, AntDesign } from "@expo/vector-icons";
+import { Feather, AntDesign, FontAwesome } from "@expo/vector-icons";
 
 const NotAuthDrawerContent = (props) => {
   return (
@@ -28,6 +28,21 @@ const NotAuthDrawerContent = (props) => {
             />
           )}
         ></DrawerItem>
+
+        <DrawerItem
+          label="Cadastrar Pet"
+          onPress={() => {
+            props.navigation.navigate("CadastrarPet");
+          }}
+          icon={() => (
+            <FontAwesome name="paw"
+              size={24}
+              color="black"
+              style={styles.drawerIcon}
+            />
+          )}
+        ></DrawerItem>
+
         <DrawerItem
           label="Login"
           onPress={() => {

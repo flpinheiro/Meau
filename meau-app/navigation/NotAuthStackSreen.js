@@ -10,6 +10,7 @@ import { Button } from "react-native-elements";
 import IntroducaoScreen from "../screens/Introducao/IntroducaoScreen";
 import Animated from "react-native-reanimated";
 import LoginScreen from "../screens/Login/LoginScreen";
+import CadastrarPetScreen from "../screens/Atalhos/CadastrarPetScreen";
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,10 @@ const NotAuthStackSreen = ({ navigation, style }) => {
         <Stack.Screen name="Introducao">
           {(props) => <IntroducaoScreen {...props} />}
         </Stack.Screen>
+
+        <Stack.Screen name="CadastrarPet">
+          {(props) => <CadastrarPetScreen {...props} />}
+        </Stack.Screen> 
 
         <Stack.Screen name="Login">
           {(props) => <LoginScreen {...props} />}
